@@ -1,0 +1,9 @@
+{
+    "name": "pie/author-vcards",
+    "description": "A plugin to add VCF endpoints to an author URL",
+    "type": "wordpress-plugin",
+    "require": {
+        "jeroendesloovere/vcard": "^1.7"
+    },
+    "license": "WTFPL"
+}
