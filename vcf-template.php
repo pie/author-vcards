@@ -36,8 +36,7 @@ $vcard->addEmail( $user->user_email );
 $vcard->addPhoneNumber( $user->telephone, 'PREF;WORK');
 $vcard->addPhoneNumber( $user->mobile_telephone, 'MOBILE');
 $vcard->addURL( get_author_posts_url( $user->ID ) );
-
-$vcard->addPhoto(wp_get_attachment_image_src( get_field( 'photo', 'user_' . $user->ID ), 'portrait-thumb' )[0] );
+$vcard->addPhoto( get_attached_file( get_field( 'photo', 'user_' . $user->ID ) ) );
 //$vcard->addPhoto('https://raw.githubusercontent.com/jeroendesloovere/vcard/master/tests/image.jpg');
 
 // return vcard as a string
