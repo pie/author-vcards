@@ -18,7 +18,7 @@ foreach( $meta as $key => $value ){
 	$user->$key = $value[0];
 }
 
-
+$user->position = get_field( 'position', 'user_' . $user->ID );
 // define variables
 $firstname = $user->first_name;
 $lastname = $user->last_name;
@@ -30,7 +30,7 @@ $suffix = '';
 $vcard->addName($lastname, $firstname, $additional, $prefix, $suffix);
 
 // add work data
-$vcard->addCompany('Siesqo');
+$vcard->addCompany('Beale & Co');
 $vcard->addJobtitle( $user->position );
 $vcard->addEmail( $user->user_email );
 $vcard->addPhoneNumber( $user->telephone, 'PREF;WORK');
