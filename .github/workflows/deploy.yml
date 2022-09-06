@@ -50,7 +50,7 @@ jobs:
       - name: Archive Release
         uses: thedoctor0/zip-release@main
         with:
-          directory: ../..
+          directory: ../
           filename: 'author-vcards.zip'
           exclusions: 'author-vcards/*.git* author-vcards/package*.json author-vcards/README.* author-vcards/release-data.json author-vcards/__TEMP*'
           
@@ -58,6 +58,6 @@ jobs:
       - name: RSync publish theme zip to hosting
         run: |
           rsync -e "ssh -i /home/runner/.ssh/github_actions" ../../author-vcards.zip ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_DIR }}
-          rsync -e "ssh -i /home/runner/.ssh/github_actions" ../../readme.txt ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_DIR }}
+          rsync -e "ssh -i /home/runner/.ssh/github_actions" ../readme.txt ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_DIR }}
 
       # Cleanup
