@@ -3,7 +3,7 @@
 Contributors: PIE Web Limited
 
 Plugin Name: Author VCards
-Version: 1.0.1
+Version: 0.0.9
 Requires at least: 4.5
 Tested up to: 6.0.2
 Requires PHP: 5.6
