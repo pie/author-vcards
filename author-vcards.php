@@ -14,7 +14,7 @@ if (! defined('ABSPATH')) {
 /**
  * Load Composer autoloader
  */
-require_once get_template_directory() . '/vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 $update_checker = Puc_v4_Factory::buildUpdateChecker(
     'http://212.71.239.229/releases/plugins/author-vcards/release-data.json',
     __FILE__,
