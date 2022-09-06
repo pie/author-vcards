@@ -1,0 +1,62 @@
+name: Deploy on version tag added
+
+on:
+  push:
+    tags: 
+      - '[0-9]+\.[0-9]+\.[0-9]+'
+jobs:
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      - name: Add SSH key
+        env:
+          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+        run: |
+            mkdir -p /home/runner/.ssh
+            ssh-keyscan ${{ secrets.SSH_HOST }} >> /home/runner/.ssh/known_hosts
+            echo "${{ secrets.SSH_PRIVATE_KEY }}" > /home/runner/.ssh/github_actions
+            chmod 600 /home/runner/.ssh/github_actions
+            ssh-agent -a $SSH_AUTH_SOCK > /dev/null
+            ssh-add /home/runner/.ssh/github_actions
+
+      # Install npm, and run install & build commands
+      # - name: NPM stuff
+      #   uses: actions/setup-node@v3
+      #   with:
+      #     node-version: 14
+
+      # - run: npm install
+      # - run: npm run build
+
+      # Install composer requirements
+      - uses: "ramsey/composer-install@v2"
+        with:
+          dependency-versions: "locked"
+
+      # Push the update.json to WPE install
+      # TODO: change to using rsync
+      - name: RSync release-data.json
+        run: rsync -e "ssh -i /home/runner/.ssh/github_actions" release-data.json ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_DIR }}
+
+      # Remove update.json from local env
+      - run: cp README.md readme.txt
+
+      # Zip local env, excluding certain files (git related)
+      - name: Archive Release
+        uses: thedoctor0/zip-release@main
+        with:
+          directory: ../
+          filename: 'author-vcards.zip'
+          exclusions: 'author-vcards/*.git* author-vcards/package*.json author-vcards/README.* author-vcards/release-data.json author-vcards/__TEMP*'
+          
+      # Push the zip up to storage
+      - name: RSync publish plugin zip to hosting
+        run: |
+          rsync -e "ssh -i /home/runner/.ssh/github_actions" ../author-vcards.zip ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_DIR }}
+
+      # Cleanup

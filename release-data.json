@@ -1,0 +1,29 @@
+{
+	"name": "PIE Plugin Manager",
+	"version": "1.0.0",
+	"details_url": "http://212.71.239.229/releases/plugins/author-vcards/update-details.zip",
+	"download_url": "http://212.71.239.229/releases/plugins/author-vcards/author-vcards.zip",
+	"homepage": "http://pie.co.de/",
+	"requires": "5.0",
+	"tested": "6.0.2",
+	"last_updated": "2022-09-06 14:52:00",
+	"upgrade_notice": "Here's why you should upgrade...",
+	"author": "The team at PIE",
+	"author_homepage": "http://pie.co.de/",
+
+	"sections": {
+		"description": "(Required) Plugin description. Basic HTML can be used in all sections.",
+		"installation": "(Recommended) Installation instructions.",
+		"changelog": "(Recommended) Changelog. <p>This section will be displayed by default when the user clicks 'View version x.y.z details'.</p>"
+	},
+	
+	"icons" : {
+		"1x" : "http://w-shadow.com/files/external-update-example/assets/icon-128x128.png",
+		"2x" : "http://w-shadow.com/files/external-update-example/assets/icon-256x256.png"
+    },
+
+	"banners": {
+		"low": "http://w-shadow.com/files/external-update-example/assets/banner-772x250.png",
+		"high": "http://w-shadow.com/files/external-update-example/assets/banner-1544x500.png"
+	}
+}
