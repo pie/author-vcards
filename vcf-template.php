@@ -13,13 +13,13 @@ use JeroenDesloovere\VCard\VCard;
 $vcard = new VCard();
 
 $user = get_queried_object()->data;
-$meta            = get_user_meta( $user->ID );
-foreach( $meta as $key => $value ){
-	$user->$key = $value[0];
+$meta            = get_user_meta($user->ID);
+foreach ($meta as $key => $value) {
+    $user->$key = $value[0];
 }
 
-$user->position = get_field( 'position', 'user_' . $user->ID );
-$user->location = get_field( 'location', 'user_' . $user->ID );
+$user->position = get_field('position', 'user_' . $user->ID);
+$user->location = get_field('location', 'user_' . $user->ID);
 // define variables
 $firstname = $user->first_name;
 $lastname = $user->last_name;
@@ -31,13 +31,13 @@ $suffix = '';
 $vcard->addName($lastname, $firstname, $additional, $prefix, $suffix);
 
 // add work data
-$vcard->addCompany(strtolower( $user->location ) == 'dublin' ? 'Beale & Co LLP' : 'Beale & Co');
-$vcard->addJobtitle( $user->position );
-$vcard->addEmail( $user->user_email );
-$vcard->addPhoneNumber( $user->telephone, 'PREF;WORK');
-$vcard->addPhoneNumber( $user->mobile_telephone, 'MOBILE');
-$vcard->addURL( get_author_posts_url( $user->ID ) );
-$vcard->addPhoto( get_attached_file( get_field( 'photo', 'user_' . $user->ID ) ) );
+$vcard->addCompany(strtolower($user->location) == 'dublin' ? 'Beale & Co LLP' : 'Beale & Co');
+$vcard->addJobtitle($user->position);
+$vcard->addEmail($user->user_email);
+$vcard->addPhoneNumber($user->telephone, 'PREF;WORK');
+$vcard->addPhoneNumber($user->mobile_telephone, 'MOBILE');
+$vcard->addURL(get_author_posts_url($user->ID));
+$vcard->addPhoto(get_attached_file(get_field('photo', 'user_' . $user->ID)));
 //$vcard->addPhoto('https://raw.githubusercontent.com/jeroendesloovere/vcard/master/tests/image.jpg');
 
 // return vcard as a string
