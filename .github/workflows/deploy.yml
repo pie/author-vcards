@@ -44,9 +44,7 @@ jobs:
         run: rsync -e "ssh -i /home/runner/.ssh/github_actions" release-data.json ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_DIR }}
 
       # Remove update.json from local env
-      - run: |
-            cp README.md readme.txt
-            pwd; ls -al
+      - run: cp README.md readme.txt
 
       # Zip local env, excluding certain files (git related)
       - name: Archive Release
@@ -59,7 +57,7 @@ jobs:
       # Push the zip up to storage
       - name: RSync publish theme zip to hosting
         run: |
-          rsync -e "ssh -i /home/runner/.ssh/github_actions" ../author-vcards.zip ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_DIR }}
-          rsync -e "ssh -i /home/runner/.ssh/github_actions" ../readme.txt ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_DIR }}
+          rsync -e "ssh -i /home/runner/.ssh/github_actions" ../../author-vcards.zip ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_DIR }}
+          rsync -e "ssh -i /home/runner/.ssh/github_actions" ../../readme.txt ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_DIR }}
 
       # Cleanup
