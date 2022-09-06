@@ -25,13 +25,13 @@ jobs:
             ssh-add /home/runner/.ssh/github_actions
 
       # Install npm, and run install & build commands
-      - name: NPM stuff
-        uses: actions/setup-node@v3
-        with:
-          node-version: 14
+      # - name: NPM stuff
+      #   uses: actions/setup-node@v3
+      #   with:
+      #     node-version: 14
 
-      - run: npm install
-      - run: npm run build
+      # - run: npm install
+      # - run: npm run build
 
       # Install composer requirements
       - uses: "ramsey/composer-install@v2"
