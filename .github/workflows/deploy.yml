@@ -44,13 +44,15 @@ jobs:
         run: rsync -e "ssh -i /home/runner/.ssh/github_actions" release-data.json ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_DIR }}
 
       # Remove update.json from local env
-      - run: cp README.md ../readme.txt
+      - run: |
+            cp README.md readme.txt
+            pwd; ls -al
 
       # Zip local env, excluding certain files (git related)
       - name: Archive Release
         uses: thedoctor0/zip-release@main
         with:
-          directory: ..
+          directory: ../..
           filename: 'author-vcards.zip'
           exclusions: 'author-vcards/*.git* author-vcards/package*.json author-vcards/README.* author-vcards/release-data.json author-vcards/__TEMP*'
           
