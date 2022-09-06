@@ -55,9 +55,9 @@ jobs:
           exclusions: 'author-vcards/*.git* author-vcards/package*.json author-vcards/README.* author-vcards/release-data.json author-vcards/__TEMP*'
           
       # Push the zip up to storage
-      - name: RSync publish theme zip to hosting
+      - name: RSync publish plugin zip to hosting
         run: |
-          rsync -e "ssh -i /home/runner/.ssh/github_actions" ../../author-vcards.zip ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_DIR }}
+          rsync -e "ssh -i /home/runner/.ssh/github_actions" ../author-vcards.zip ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_DIR }}
           rsync -e "ssh -i /home/runner/.ssh/github_actions" ../readme.txt ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_DIR }}
 
       # Cleanup
