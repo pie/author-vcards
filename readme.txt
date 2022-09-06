@@ -3,11 +3,11 @@
 Contributors: PIE Web Limited
 
 Name: Author VCards
-Version: 1.0.0
+Version: 1.0.1
 Requires at least: 4.5
-Tested up to: 8.0.2
+Tested up to: 6.0.2
 Requires PHP: 5.6
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GNU General Public License v2 or later
 License URI: LICENSE
 

@@ -1,11 +1,11 @@
 {
 	"name": "PIE Plugin Manager",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"details_url": "http://212.71.239.229/releases/plugins/author-vcards/update-details.zip",
 	"download_url": "http://212.71.239.229/releases/plugins/author-vcards/author-vcards.zip",
 	"homepage": "http://pie.co.de/",
 	"requires": "5.0",
-	"tested": "5.9",
+	"tested": "6.0.2",
 	"last_updated": "2022-09-06 14:52:00",
 	"upgrade_notice": "Here's why you should upgrade...",
 	"author": "The team at PIE",
