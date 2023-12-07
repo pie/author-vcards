@@ -5,6 +5,7 @@
  * Plugin URI: https://github.com/pie/author-vcards/
  * Version: 1.2.6
  * Author: The team at PIE
+ * Author URI: https://pie.co.de
  */
 namespace PIE\AuthorVcards;
 
