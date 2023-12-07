@@ -1,4 +1,4 @@
-name: Maybe Create a Release, or Don't
+name: Maybe Create a Release
 
 on: 
   push:
