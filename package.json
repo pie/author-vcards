@@ -1,6 +1,6 @@
 {
   "name": "pie/author-vcards",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "A plugin to add VCF endpoints to an author URL",
   "main": "author-vcards.php",
   "repository": "git@github.com:pie/author-vcards.git",
