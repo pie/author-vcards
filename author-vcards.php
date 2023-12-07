@@ -2,9 +2,9 @@
 
 /**
  * Plugin Name: Author VCards
- * Plugin URI:  https://github.com/pie/author-vcards/
- * Version:     1.1.0
- * Author:      The team at PIE
+ * Plugin URI: https://github.com/pie/author-vcards/
+ * Version: 1.1.0
+ * Author: The team at PIE
  */
 namespace PIE\AuthorVcards;
 
