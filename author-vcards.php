@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Author VCards
  * Plugin URI: https://github.com/pie/author-vcards/
- * Version: 1.2.7
+ * Version: 1.2.8
  * Author: The team at PIE
  * Author URI: https://pie.co.de
  */
