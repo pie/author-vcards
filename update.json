@@ -1,7 +1,7 @@
 {
     "name": "Author VCards",
-    "version": "1.2.6",
-    "download_url": "https://github.com/pie/author-vcards/releases/download/1.2.6/author-vcards.zip",
+    "version": "1.2.7",
+    "download_url": "https://github.com/pie/author-vcards/releases/download/1.2.7/author-vcards.zip",
     "sections": {
         "description" : "A plugin to add VCF endpoints to an author URL"
     }

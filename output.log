@@ -512,3 +512,63 @@ Skipping env variable PWD
 Skipping env variable HOME
 Skipping env variable SHLVL
 Skipping env variable PATH
+Running php-build composer
+WARNING! Your password will be stored unencrypted in /home/runner/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+Pulling docker.pkg.github.com/pie/author-vcards/php-actions_composer_author-vcards:php-latest-build2.1.0
+php-latest-build2.1.0: Pulling from pie/author-vcards/php-actions_composer_author-vcards
+c926b61bad3b: Already exists
+e8e26b626c27: Pulling fs layer
+23427f6f19cc: Pulling fs layer
+938ee652f0dd: Pulling fs layer
+8abe2aaf4047: Pulling fs layer
+e06ec6f10243: Pulling fs layer
+9ea984f05cf2: Pulling fs layer
+2e6c3ecb64ca: Pulling fs layer
+d3b07fe920dd: Pulling fs layer
+b859986b7d30: Pulling fs layer
+9ea984f05cf2: Waiting
+2e6c3ecb64ca: Waiting
+d3b07fe920dd: Waiting
+b859986b7d30: Waiting
+8abe2aaf4047: Waiting
+e06ec6f10243: Waiting
+938ee652f0dd: Verifying Checksum
+938ee652f0dd: Download complete
+23427f6f19cc: Verifying Checksum
+23427f6f19cc: Download complete
+e8e26b626c27: Verifying Checksum
+e8e26b626c27: Download complete
+e8e26b626c27: Pull complete
+23427f6f19cc: Pull complete
+938ee652f0dd: Pull complete
+e06ec6f10243: Verifying Checksum
+e06ec6f10243: Download complete
+8abe2aaf4047: Verifying Checksum
+8abe2aaf4047: Download complete
+8abe2aaf4047: Pull complete
+e06ec6f10243: Pull complete
+9ea984f05cf2: Verifying Checksum
+9ea984f05cf2: Download complete
+2e6c3ecb64ca: Verifying Checksum
+2e6c3ecb64ca: Download complete
+d3b07fe920dd: Verifying Checksum
+d3b07fe920dd: Download complete
+9ea984f05cf2: Pull complete
+2e6c3ecb64ca: Pull complete
+d3b07fe920dd: Pull complete
+b859986b7d30: Download complete
+b859986b7d30: Pull complete
+Digest: sha256:440945fc8dcd9f8cbe83d4506bd49739cbb40ce62ba03928611989e5f94c49de
+Status: Downloaded newer image for docker.pkg.github.com/pie/author-vcards/php-actions_composer_author-vcards:php-latest-build2.1.0
+docker.pkg.github.com/pie/author-vcards/php-actions_composer_author-vcards:php-latest-build2.1.0
+Docker tag: docker.pkg.github.com/pie/author-vcards/php-actions_composer_author-vcards:php-latest-build2.1.0
+No private keys supplied
+Command: composer install --no-dev --no-progress --no-interaction
+Skipping env variable PWD
+Skipping env variable HOME
+Skipping env variable SHLVL
+Skipping env variable PATH
