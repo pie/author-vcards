@@ -1,0 +1,7 @@
+.git
+.github
+.zipignore
+.gitignore
+composer.json
+composer.lock
+package.json
