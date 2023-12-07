@@ -23,12 +23,23 @@ $update_checker = \Puc_v4_Factory::buildUpdateChecker(
     'author-vcards'
 );
 
+/**
+ * Add vcard endpoint
+ *
+ * @return void
+ */
 function add_vcard_endpoint()
 {
     add_rewrite_endpoint('vcf', EP_AUTHORS);
 }
 add_action('init', __NAMESPACE__ . '\add_vcard_endpoint');
 
+/**
+ * Add vcard query var
+ *
+ * @param array $vars
+ * @return array
+ */
 function json_template_redirect()
 {
     global $wp_query;
