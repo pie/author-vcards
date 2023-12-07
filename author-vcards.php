@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Author VCards
  * Plugin URI: https://github.com/pie/author-vcards/
- * Version: 1.1.0
+ * Version: 1.2.5
  * Author: The team at PIE
  */
 namespace PIE\AuthorVcards;
@@ -18,7 +18,7 @@ if (!defined('ABSPATH')) {
 
 require_once __DIR__ . '/vendor/autoload.php';
 $update_checker = \Puc_v4_Factory::buildUpdateChecker(
-    'http://212.71.239.229/releases/plugins/author-vcards/release-data.json',
+    'https://pie.github.io/author-vcards/update.json',
     __FILE__,
     'author-vcards'
 );
