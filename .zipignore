@@ -1,7 +1,12 @@
 .git
-.github
+.git/*
+.github/*
 .zipignore
 .gitignore
 composer.json
 composer.lock
 package.json
+DOCKER_ENV
+Dockerfile-php-build
+docker_tag
+output.log
