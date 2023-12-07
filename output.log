@@ -1,0 +1,265 @@
+Running php-build composer
+WARNING! Your password will be stored unencrypted in /home/runner/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+Pulling docker.pkg.github.com/pie/author-vcards/php-actions_composer_author-vcards:php-latest-build2.1.0
+Error response from daemon: manifest unknown
+Dockerfile:
+FROM php:cli-alpine
+RUN apk add --update --no-cache bash coreutils git make openssh patch unzip zip
+#0 building with "default" instance using docker driver
+
+#1 [internal] load .dockerignore
+#1 transferring context: 2B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile-php-build
+#2 transferring dockerfile: 147B done
+#2 DONE 0.0s
+
+#3 [auth] library/php:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/php:cli-alpine
+#4 DONE 0.5s
+
+#5 [1/2] FROM docker.io/library/php:cli-alpine@sha256:72ce7e0cf01d9325c30f1d5c4a588fa794c2e1620dd7c087f5a682cc9c27ff39
+#5 DONE 0.0s
+
+#6 importing cache manifest from docker.pkg.github.com/pie/author-vcards/php-actions_composer_author-vcards:php-latest-build2.1.0
+#6 ERROR: failed to configure registry cache importer: pulling from host docker.pkg.github.com failed with status code [manifests php-latest-build2.1.0]: 401 Unauthorized
+
+#5 [1/2] FROM docker.io/library/php:cli-alpine@sha256:72ce7e0cf01d9325c30f1d5c4a588fa794c2e1620dd7c087f5a682cc9c27ff39
+#5 resolve docker.io/library/php:cli-alpine@sha256:72ce7e0cf01d9325c30f1d5c4a588fa794c2e1620dd7c087f5a682cc9c27ff39 done
+#5 sha256:f234c52bde1afb1c7483af5718ac85510fba1781787cd9ba7839a56918ed414a 2.20kB / 2.20kB done
+#5 sha256:9981a777f783c18a7e1c7f41c52e0458a41032d912057a4f7c6e61777866b2c0 8.98kB / 8.98kB done
+#5 sha256:c926b61bad3b94ae7351bafd0c184c159ebf0643b085f7ef1d47ecdc7316833c 3.40MB / 3.40MB 0.1s done
+#5 sha256:e8e26b626c27026d1938a0b6bd77e36b4113da4b7a1134df8d1aa9f49658b25f 2.68MB / 2.68MB 0.1s
+#5 sha256:938ee652f0dd66c081c31e773163d4c3d8ec979f9ced384ed270cdc5fbcbe657 269B / 269B 0.1s
+#5 sha256:72ce7e0cf01d9325c30f1d5c4a588fa794c2e1620dd7c087f5a682cc9c27ff39 1.65kB / 1.65kB done
+#5 sha256:23427f6f19cc27aa3496173559d7fc30c2501d1d179a15b52ac1758cc1667d37 1.26kB / 1.26kB 0.0s done
+#5 sha256:e8e26b626c27026d1938a0b6bd77e36b4113da4b7a1134df8d1aa9f49658b25f 2.68MB / 2.68MB 0.1s done
+#5 sha256:938ee652f0dd66c081c31e773163d4c3d8ec979f9ced384ed270cdc5fbcbe657 269B / 269B 0.1s done
+#5 extracting sha256:c926b61bad3b94ae7351bafd0c184c159ebf0643b085f7ef1d47ecdc7316833c
+#5 sha256:2e6c3ecb64ca025834e2eba225bd5d603742000e1d67407ba50cf0f60ea41a98 2.45kB / 2.45kB 0.2s done
+#5 sha256:d3b07fe920dd6973a44ea83074fd9125fe7d4774492d00c0ffefb9a04a847a29 0B / 18.95kB 0.2s
+#5 sha256:8abe2aaf4047e9984223c8d63be88c09b7d447f8c9f77851aa06771c52bba05b 8.39MB / 12.45MB 0.2s
+#5 sha256:e06ec6f102433dfe7410990547f8d059d4c3e56455e35d7b4dfbfb96784486e1 492B / 492B 0.2s done
+#5 sha256:9ea984f05cf27a91a07a0b1f63adb1e6f9c4cb631325b5a07343b8faf75f7028 9.44MB / 17.07MB 0.2s
+#5 extracting sha256:c926b61bad3b94ae7351bafd0c184c159ebf0643b085f7ef1d47ecdc7316833c 0.1s done
+#5 sha256:d3b07fe920dd6973a44ea83074fd9125fe7d4774492d00c0ffefb9a04a847a29 18.95kB / 18.95kB 0.2s done
+#5 sha256:8abe2aaf4047e9984223c8d63be88c09b7d447f8c9f77851aa06771c52bba05b 12.45MB / 12.45MB 0.3s
+#5 sha256:9ea984f05cf27a91a07a0b1f63adb1e6f9c4cb631325b5a07343b8faf75f7028 17.07MB / 17.07MB 0.3s
+#5 sha256:8abe2aaf4047e9984223c8d63be88c09b7d447f8c9f77851aa06771c52bba05b 12.45MB / 12.45MB 0.3s done
+#5 sha256:9ea984f05cf27a91a07a0b1f63adb1e6f9c4cb631325b5a07343b8faf75f7028 17.07MB / 17.07MB 0.4s done
+#5 extracting sha256:e8e26b626c27026d1938a0b6bd77e36b4113da4b7a1134df8d1aa9f49658b25f
+#5 extracting sha256:e8e26b626c27026d1938a0b6bd77e36b4113da4b7a1134df8d1aa9f49658b25f 0.1s done
+#5 extracting sha256:23427f6f19cc27aa3496173559d7fc30c2501d1d179a15b52ac1758cc1667d37 done
+#5 extracting sha256:938ee652f0dd66c081c31e773163d4c3d8ec979f9ced384ed270cdc5fbcbe657 done
+#5 extracting sha256:8abe2aaf4047e9984223c8d63be88c09b7d447f8c9f77851aa06771c52bba05b 0.1s done
+#5 extracting sha256:e06ec6f102433dfe7410990547f8d059d4c3e56455e35d7b4dfbfb96784486e1
+#5 extracting sha256:e06ec6f102433dfe7410990547f8d059d4c3e56455e35d7b4dfbfb96784486e1 done
+#5 extracting sha256:9ea984f05cf27a91a07a0b1f63adb1e6f9c4cb631325b5a07343b8faf75f7028 0.1s
+#5 extracting sha256:9ea984f05cf27a91a07a0b1f63adb1e6f9c4cb631325b5a07343b8faf75f7028 0.5s done
+#5 extracting sha256:2e6c3ecb64ca025834e2eba225bd5d603742000e1d67407ba50cf0f60ea41a98 done
+#5 extracting sha256:d3b07fe920dd6973a44ea83074fd9125fe7d4774492d00c0ffefb9a04a847a29 done
+#5 DONE 2.3s
+
+#7 [2/2] RUN apk add --update --no-cache bash coreutils git make openssh patch unzip zip
+#7 0.205 fetch https://dl-cdn.alpinelinux.org/alpine/v3.18/main/x86_64/APKINDEX.tar.gz
+#7 0.279 fetch https://dl-cdn.alpinelinux.org/alpine/v3.18/community/x86_64/APKINDEX.tar.gz
+#7 0.459 (1/20) Installing bash (5.2.15-r5)
+#7 0.475 Executing bash-5.2.15-r5.post-install
+#7 0.478 (2/20) Installing libattr (2.5.1-r4)
+#7 0.481 (3/20) Installing skalibs (2.13.1.1-r1)
+#7 0.484 (4/20) Installing utmps-libs (0.1.2.1-r1)
+#7 0.486 (5/20) Installing coreutils (9.3-r1)
+#7 0.508 (6/20) Installing libexpat (2.5.0-r1)
+#7 0.511 (7/20) Installing pcre2 (10.42-r1)
+#7 0.522 (8/20) Installing git (2.40.1-r0)
+#7 0.586 (9/20) Installing make (4.4.1-r1)
+#7 0.593 (10/20) Installing openssh-keygen (9.3_p2-r0)
+#7 0.599 (11/20) Installing libedit (20221030.3.1-r1)
+#7 0.602 (12/20) Installing openssh-client-common (9.3_p2-r0)
+#7 0.619 (13/20) Installing openssh-client-default (9.3_p2-r0)
+#7 0.633 (14/20) Installing openssh-sftp-server (9.3_p2-r0)
+#7 0.637 (15/20) Installing openssh-server-common (9.3_p2-r0)
+#7 0.639 (16/20) Installing openssh-server (9.3_p2-r0)
+#7 0.647 (17/20) Installing openssh (9.3_p2-r0)
+#7 0.652 (18/20) Installing patch (2.7.6-r10)
+#7 0.656 (19/20) Installing unzip (6.0-r14)
+#7 0.662 (20/20) Installing zip (3.0-r12)
+#7 0.676 Executing busybox-1.36.1-r5.trigger
+#7 0.682 OK: 34 MiB in 57 packages
+#7 DONE 0.9s
+
+#8 exporting to image
+#8 exporting layers
+#8 exporting layers 0.5s done
+#8 writing image sha256:bc0f0c68bc2892a388a16edd56456213bd0d559b94677d4dcb3536c8eda05243 done
+#8 naming to docker.pkg.github.com/pie/author-vcards/php-actions_composer_author-vcards:php-latest-build2.1.0 done
+#8 DONE 0.5s
+------
+ > importing cache manifest from docker.pkg.github.com/pie/author-vcards/php-actions_composer_author-vcards:php-latest-build2.1.0:
+------
+The push refers to repository [docker.pkg.github.com/pie/author-vcards/php-actions_composer_author-vcards]
+7f1b839eff90: Preparing
+90b8d4902a19: Preparing
+8fabd6755a0f: Preparing
+c6ed156f6f10: Preparing
+84b395d04cbd: Preparing
+a3314aa819f0: Preparing
+c64401da15ca: Preparing
+a09783b7060e: Preparing
+c22f43a9a8e0: Preparing
+9fe9a137fd00: Preparing
+a3314aa819f0: Waiting
+c64401da15ca: Waiting
+a09783b7060e: Waiting
+c22f43a9a8e0: Waiting
+9fe9a137fd00: Waiting
+8fabd6755a0f: Pushed
+90b8d4902a19: Pushed
+84b395d04cbd: Pushed
+c64401da15ca: Pushed
+7f1b839eff90: Pushed
+a09783b7060e: Pushed
+a3314aa819f0: Pushed
+c22f43a9a8e0: Pushed
+9fe9a137fd00: Pushed
+c6ed156f6f10: Pushed
+php-latest-build2.1.0: digest: sha256:440945fc8dcd9f8cbe83d4506bd49739cbb40ce62ba03928611989e5f94c49de size: 2413
+Docker tag: docker.pkg.github.com/pie/author-vcards/php-actions_composer_author-vcards:php-latest-build2.1.0
+No private keys supplied
+Command: composer install --no-dev --no-progress --no-interaction
+Skipping env variable PWD
+Skipping env variable HOME
+Skipping env variable SHLVL
+Skipping env variable PATH
+Running php-build composer
+WARNING! Your password will be stored unencrypted in /home/runner/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+Pulling docker.pkg.github.com/pie/author-vcards/php-actions_composer_author-vcards:php-latest-build2.1.0
+php-latest-build2.1.0: Pulling from pie/author-vcards/php-actions_composer_author-vcards
+c926b61bad3b: Pulling fs layer
+e8e26b626c27: Pulling fs layer
+23427f6f19cc: Pulling fs layer
+938ee652f0dd: Pulling fs layer
+8abe2aaf4047: Pulling fs layer
+e06ec6f10243: Pulling fs layer
+9ea984f05cf2: Pulling fs layer
+2e6c3ecb64ca: Pulling fs layer
+d3b07fe920dd: Pulling fs layer
+b859986b7d30: Pulling fs layer
+d3b07fe920dd: Waiting
+e06ec6f10243: Waiting
+9ea984f05cf2: Waiting
+b859986b7d30: Waiting
+2e6c3ecb64ca: Waiting
+938ee652f0dd: Waiting
+8abe2aaf4047: Waiting
+23427f6f19cc: Verifying Checksum
+23427f6f19cc: Download complete
+e8e26b626c27: Verifying Checksum
+e8e26b626c27: Download complete
+c926b61bad3b: Verifying Checksum
+c926b61bad3b: Download complete
+c926b61bad3b: Pull complete
+938ee652f0dd: Verifying Checksum
+938ee652f0dd: Download complete
+e8e26b626c27: Pull complete
+23427f6f19cc: Pull complete
+938ee652f0dd: Pull complete
+e06ec6f10243: Verifying Checksum
+e06ec6f10243: Download complete
+8abe2aaf4047: Verifying Checksum
+8abe2aaf4047: Download complete
+8abe2aaf4047: Pull complete
+e06ec6f10243: Pull complete
+2e6c3ecb64ca: Download complete
+d3b07fe920dd: Download complete
+9ea984f05cf2: Verifying Checksum
+9ea984f05cf2: Download complete
+b859986b7d30: Download complete
+9ea984f05cf2: Pull complete
+2e6c3ecb64ca: Pull complete
+d3b07fe920dd: Pull complete
+b859986b7d30: Pull complete
+Digest: sha256:440945fc8dcd9f8cbe83d4506bd49739cbb40ce62ba03928611989e5f94c49de
+Status: Downloaded newer image for docker.pkg.github.com/pie/author-vcards/php-actions_composer_author-vcards:php-latest-build2.1.0
+docker.pkg.github.com/pie/author-vcards/php-actions_composer_author-vcards:php-latest-build2.1.0
+Docker tag: docker.pkg.github.com/pie/author-vcards/php-actions_composer_author-vcards:php-latest-build2.1.0
+No private keys supplied
+Command: composer install --no-dev --no-progress --no-interaction
+Skipping env variable PWD
+Skipping env variable HOME
+Skipping env variable SHLVL
+Skipping env variable PATH
+Running php-build composer
+WARNING! Your password will be stored unencrypted in /home/runner/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+Pulling docker.pkg.github.com/pie/author-vcards/php-actions_composer_author-vcards:php-latest-build2.1.0
+php-latest-build2.1.0: Pulling from pie/author-vcards/php-actions_composer_author-vcards
+c926b61bad3b: Pulling fs layer
+e8e26b626c27: Pulling fs layer
+23427f6f19cc: Pulling fs layer
+938ee652f0dd: Pulling fs layer
+8abe2aaf4047: Pulling fs layer
+e06ec6f10243: Pulling fs layer
+9ea984f05cf2: Pulling fs layer
+2e6c3ecb64ca: Pulling fs layer
+d3b07fe920dd: Pulling fs layer
+b859986b7d30: Pulling fs layer
+8abe2aaf4047: Waiting
+2e6c3ecb64ca: Waiting
+e06ec6f10243: Waiting
+d3b07fe920dd: Waiting
+9ea984f05cf2: Waiting
+b859986b7d30: Waiting
+938ee652f0dd: Waiting
+c926b61bad3b: Verifying Checksum
+c926b61bad3b: Download complete
+23427f6f19cc: Download complete
+c926b61bad3b: Pull complete
+e8e26b626c27: Verifying Checksum
+e8e26b626c27: Download complete
+e8e26b626c27: Pull complete
+23427f6f19cc: Pull complete
+938ee652f0dd: Download complete
+938ee652f0dd: Pull complete
+e06ec6f10243: Verifying Checksum
+e06ec6f10243: Download complete
+8abe2aaf4047: Verifying Checksum
+8abe2aaf4047: Download complete
+8abe2aaf4047: Pull complete
+e06ec6f10243: Pull complete
+2e6c3ecb64ca: Verifying Checksum
+2e6c3ecb64ca: Download complete
+9ea984f05cf2: Verifying Checksum
+9ea984f05cf2: Download complete
+d3b07fe920dd: Verifying Checksum
+d3b07fe920dd: Download complete
+b859986b7d30: Verifying Checksum
+b859986b7d30: Download complete
+9ea984f05cf2: Pull complete
+2e6c3ecb64ca: Pull complete
+d3b07fe920dd: Pull complete
+b859986b7d30: Pull complete
+Digest: sha256:440945fc8dcd9f8cbe83d4506bd49739cbb40ce62ba03928611989e5f94c49de
+Status: Downloaded newer image for docker.pkg.github.com/pie/author-vcards/php-actions_composer_author-vcards:php-latest-build2.1.0
+docker.pkg.github.com/pie/author-vcards/php-actions_composer_author-vcards:php-latest-build2.1.0
+Docker tag: docker.pkg.github.com/pie/author-vcards/php-actions_composer_author-vcards:php-latest-build2.1.0
+No private keys supplied
+Command: composer install --no-dev --no-progress --no-interaction
+Skipping env variable PWD
+Skipping env variable HOME
+Skipping env variable SHLVL
+Skipping env variable PATH
