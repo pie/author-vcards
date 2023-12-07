@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Adding in a robust updater
 
+- Adding in a robust updater
+
 ## [1.1.0] 2022-09-06
 
 - Added filters around non-standard WP user fields in absence of meta
