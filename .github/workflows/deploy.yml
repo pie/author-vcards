@@ -7,5 +7,4 @@ on:
 jobs:
   run-release-workflow:
     uses: pie/.github/.github/workflows/release.yaml@main
-    secrets:
-      token: ${{ secrets.GITHUB_TOKEN }}
+    secrets: inherit
