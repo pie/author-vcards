@@ -24,7 +24,7 @@ $update_checker = \Puc_v4_Factory::buildUpdateChecker(
 );
 
 /**
- * Add vcard endpoint
+ * Add vcard endpoint and a comment
  *
  * @return void
  */
